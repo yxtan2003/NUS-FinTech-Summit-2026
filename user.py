@@ -16,4 +16,9 @@ class User {
             raise ValueError(f"Ticket {ticket_id} is already owned by this user.")
         self.tickets_owned.append(ticket_id)
     }
+
+    def buy_ticket(price) {
+        check if ticket with price in marketplace: 
+            add_ticket
+    }
 }
