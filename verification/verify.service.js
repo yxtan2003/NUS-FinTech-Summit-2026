@@ -65,7 +65,7 @@ exports.verify = async (chipId) => {
       manufacturer: firebaseData.manufacturer,
       manufacturing_date: firebaseData.manufacturing_date,
       expiry_date: firebaseData.expiry_date,
-      chip_public_key: firebaseData.chip_public_key || firebaseData.chip_id || firebaseData.chipId,
+      chip_public_key: firebaseData.chip_public_key,
       batch_id: firebaseData.batch_id,
       drug_name: firebaseData.drug_name,
       description: firebaseData.description,
@@ -80,8 +80,6 @@ exports.verify = async (chipId) => {
   return {
     status: 'authentic',
     token_id: tokenId,
-    nft_id: nftInfo.nft_id || tokenId,
-    issuer: nftInfo.issuer || null,
     metadata_source: nftInfo.uri ? 'xrpl' : 'firebase',
     metadata
   };
