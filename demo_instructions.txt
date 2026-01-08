@@ -1,0 +1,13 @@
+Step 1: git pull origin main into local repository
+Step 2: Open new Terminal
+Step 3: Navigate to the local repository
+Step 4: To simulate minting of NFT: navigate using "cd minting"
+Step 5: npm install dotenv express firebase firebase-admin xrpl
+Step 6: run "node simulateMINT.js" in the Terminal
+
+If done correctly, a message containing:
+"NFT minted: {
+  firestore_id: '...',
+  xrpl_token_id: '...'
+}"
+should be returned.

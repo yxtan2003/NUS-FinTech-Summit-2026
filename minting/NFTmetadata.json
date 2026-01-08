@@ -1,0 +1,10 @@
+
+{
+  "manufacturer": "Pfizer",
+  "manufacturing_date": "2026-01-01",
+  "expiry_date": "2027-01-01",
+  "chip_public_key": "04A1B2C3D4E5F6...",
+  "batch_id": "BATCH-2026-001",
+  "drug_name": "COVID-19 Vaccine",   
+  "description": "mRNA vaccine vial – single dose"
+}

@@ -16,10 +16,14 @@
     "url": "https://github.com/yxtan2003/NUS-FinTech-Summit-2026/issues"
   },
   "homepage": "https://github.com/yxtan2003/NUS-FinTech-Summit-2026#readme",
-  "description": "",
   "dependencies": {
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
+    "firebase": "^12.7.0",
+    "firebase-admin": "^13.6.0"
+    "xrpl": "^4.5.0"
+  },
+  "description": ""
     "firebase-admin": "^13.6.0",
     "xrpl": "^4.5.0"
   }
