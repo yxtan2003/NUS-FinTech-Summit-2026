@@ -18,6 +18,7 @@
   "homepage": "https://github.com/yxtan2003/NUS-FinTech-Summit-2026#readme",
   "description": "",
   "dependencies": {
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "firebase-admin": "^13.6.0"
   }
 }
