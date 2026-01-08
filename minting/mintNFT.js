@@ -1,7 +1,6 @@
 const xrpl = require("xrpl")
-const { db, admin } = require("./firebase")
+const { db, admin } = require("../db/firebase.js")
 const { getClient } = require("./xrplClient")
-const { v4: uuidv4 } = require("uuid")
 
 async function mintDrugNFT({
   manufacturer,
