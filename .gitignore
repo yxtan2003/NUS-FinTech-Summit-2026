@@ -1,0 +1,8 @@
+# Dependencies
+node_modules/
+
+# Firebase secrets
+firebase-key.json
+
+# Environment variables
+.env
