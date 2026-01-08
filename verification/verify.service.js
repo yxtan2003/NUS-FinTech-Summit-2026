@@ -53,15 +53,7 @@ exports.verify = async (chipId) => {
 
   // 3) Resolve metadata: prefer on-ledger (nftInfo.uri) if it's JSON, otherwise fall back to firebase stored metadata
   let metadata = null;
-  if (nftInfo.uri) {
-    try {
-      metadata = JSON.parse(nftInfo.uri);
-    } catch (e) {
-      metadata = nftInfo.uri;
-    }
-  } else {
-    // fallback to firebase stored metadata (structure your documents accordingly)
-    metadata = {
+  metadata = {
       manufacturer: firebaseData.manufacturer,
       manufacturing_date: firebaseData.manufacturing_date,
       expiry_date: firebaseData.expiry_date,
@@ -73,9 +65,8 @@ exports.verify = async (chipId) => {
       xrpl_account: firebaseData.xrpl_account,
       xrpl_token_id: firebaseData.xrpl_token_id
     };
-  }
 
-  logAttempt(chipId, 'authentic');
+  logAttempt(chipId, 'authentic', metadata.manufacturer);
 
   return {
     status: 'authentic',

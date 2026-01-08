@@ -1,9 +1,9 @@
 Step 1: git pull origin main into local repository
 Step 2: Open new Terminal
 Step 3: Navigate to the local repository
-Step 4: To simulate minting of NFT: navigate using "cd minting"
+Step 4: To simulate minting of NFT: navigate using "cd test"
 Step 5: npm install dotenv express firebase firebase-admin xrpl
-Step 6: run "node simulateMINT.js" in the Terminal
+Step 6: run "node mint-test.js" in the Terminal
 
 If done correctly, a message containing:
 "NFT minted: {
@@ -16,7 +16,7 @@ should be returned.
 
 How to verify if batch of drugs is authentic:
 
-Step 7: run node app.js
+Step 7: run node verification-test.js
 Step 8: Open up cmd and run:
 curl -X POST http://localhost:3000/api/verify -H "Content-Type: application/json" -d "{\"chipId\":\"YOUR_CHIP_ID_HERE\"}"
 
