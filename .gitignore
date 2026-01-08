@@ -6,3 +6,5 @@ firebase-key.json
 
 # Environment variables
 .env
+
+xrpl-keys.json

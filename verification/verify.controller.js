@@ -1,10 +1,13 @@
-exports.verify = async (req, res) => {
-    const { chip_id } = req.body;
+const verifyService = require('./verify.service');
 
-    if (!chip_id) {
-        return res.status(400).json({ error: "chip_id does not exist"});
+
+exports.verify = async (req, res) => {
+    const { chipId } = req.body;
+
+    if (!chipId) {
+        return res.status(400).json({ error: "chipId does not exist"});
     }
 
-    const result = await verifyService.verify(chip_id);
+    const result = await verifyService.verify(chipId);
     res.json(result);
 }
