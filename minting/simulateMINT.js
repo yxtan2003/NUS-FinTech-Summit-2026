@@ -1,6 +1,6 @@
 // simulateMint.js
 console.log("Script started");
-require("dotenv").config()
+require("dotenv").config({ path: require("path").join(__dirname, "../.env") })
 const { mintDrugNFT } = require("./mintNFT")
 
 async function run() {

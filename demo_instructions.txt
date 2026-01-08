@@ -11,3 +11,19 @@ If done correctly, a message containing:
   xrpl_token_id: '...'
 }"
 should be returned.
+
+
+
+How to verify if batch of drugs is authentic:
+
+Step 7: run node app.js
+Step 8: Open up cmd and run:
+curl -X POST http://localhost:3000/api/verify -H "Content-Type: application/json" -d "{\"chipId\":\"YOUR_CHIP_ID_HERE\"}"
+
+If done correctly, a message containing:
+{
+  chipId: 'CHIP_ID',
+  result: 'AUTHENTIC/COUNTERFEIT',
+  timestamp: '...'
+}
+should be returned

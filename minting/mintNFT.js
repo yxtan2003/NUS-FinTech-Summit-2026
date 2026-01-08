@@ -1,3 +1,4 @@
+require("dotenv").config({ path: require("path").join(__dirname, "../.env") })
 const xrpl = require("xrpl")
 const { db, admin } = require("../db/firebase.js")
 const { getClient } = require("./xrplClient")
@@ -14,7 +15,11 @@ async function mintDrugNFT({
   const client = await getClient()
 
   // Testnet wallet (use faucet-generated wallet)
-  const wallet = xrpl.Wallet.fromSeed(process.env.XRPL_SEED) // get from .env, what is env? env is environment variable file that stores sensitive info like API keys, secrets, etc.
+  const seed = process.env.XRPL_SEED
+  if (!seed) {
+    throw new Error("XRPL_SEED environment variable is not set")
+  }
+  const wallet = xrpl.Wallet.fromSeed(seed) // get from .env, what is env? env is environment variable file that stores sensitive info like API keys, secrets, etc.
 
   const metadata = {
     manufacturer,
